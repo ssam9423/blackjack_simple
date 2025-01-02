@@ -74,8 +74,8 @@ def card_suit(card):
     
 # Determines Card Color (Spades, Hearts, Diamonds, Clubs)
 def card_color(card):
-    color = int(card / 13) % 2
-    if color == 0:
+    color = (int(card / 13) + 3) % 4
+    if color >= 2:
         return 'black'
     else:
         return 'red'
